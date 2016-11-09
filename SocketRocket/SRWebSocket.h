@@ -220,7 +220,7 @@ extern NSString *const SRHTTPResponseErrorKey;
  @param runLoop The run loop on which to schedule the receiver.
  @param mode     The mode for the run loop.
  */
-- (void)scheduleInRunLoop:(NSRunLoop *)runLoop forMode:(NSString *)mode NS_SWIFT_NAME(schedule(in:forMode:));
+- (void)scheduleInRunLoop:(NSRunLoop *)runLoop forMode:(NSString *)mode;
 
 /**
  Removes the receiver from a given run loop running in a given mode.
@@ -228,7 +228,7 @@ extern NSString *const SRHTTPResponseErrorKey;
  @param runLoop The run loop on which the receiver was scheduled.
  @param mode    The mode for the run loop.
  */
-- (void)unscheduleFromRunLoop:(NSRunLoop *)runLoop forMode:(NSString *)mode NS_SWIFT_NAME(unschedule(from:forMode:));
+- (void)unscheduleFromRunLoop:(NSRunLoop *)runLoop forMode:(NSString *)mode;
 
 ///--------------------------------------
 #pragma mark - Open / Close
@@ -276,7 +276,7 @@ extern NSString *const SRHTTPResponseErrorKey;
 
  @return `YES` if the string was scheduled to send, otherwise - `NO`.
  */
-- (BOOL)sendString:(NSString *)string error:(NSError **)error NS_SWIFT_NAME(send(string:));
+- (BOOL)sendString:(NSString *)string error:(NSError **)error;
 
 /**
  Send binary data to the server.
@@ -288,7 +288,7 @@ extern NSString *const SRHTTPResponseErrorKey;
 
  @return `YES` if the string was scheduled to send, otherwise - `NO`.
  */
-- (BOOL)sendData:(nullable NSData *)data error:(NSError **)error NS_SWIFT_NAME(send(data:));
+- (BOOL)sendData:(nullable NSData *)data error:(NSError **)error;
 
 /**
  Send binary data to the server, without making a defensive copy of it first.
@@ -300,7 +300,7 @@ extern NSString *const SRHTTPResponseErrorKey;
 
  @return `YES` if the string was scheduled to send, otherwise - `NO`.
  */
-- (BOOL)sendDataNoCopy:(nullable NSData *)data error:(NSError **)error NS_SWIFT_NAME(send(dataNoCopy:));
+- (BOOL)sendDataNoCopy:(nullable NSData *)data error:(NSError **)error;
 
 /**
  Send Ping message to the server with optional data.
@@ -312,7 +312,7 @@ extern NSString *const SRHTTPResponseErrorKey;
 
  @return `YES` if the string was scheduled to send, otherwise - `NO`.
  */
-- (BOOL)sendPing:(nullable NSData *)data error:(NSError **)error NS_SWIFT_NAME(sendPing(_:));
+- (BOOL)sendPing:(nullable NSData *)data error:(NSError **)error;
 
 @end
 
@@ -406,7 +406,7 @@ extern NSString *const SRHTTPResponseErrorKey;
 
  @return `YES` if text frame should be converted to UTF-8 String, otherwise - `NO`. Default: `YES`.
  */
-- (BOOL)webSocketShouldConvertTextFrameToString:(SRWebSocket *)webSocket NS_SWIFT_NAME(webSocketShouldConvertTextFrameToString(_:));
+- (BOOL)webSocketShouldConvertTextFrameToString:(SRWebSocket *)webSocket;
 
 @end
 
